@@ -1,0 +1,6 @@
+application:
+  name: python-quality-gate
+  version: 1.0
+  settings:
+    debug: true
+    timeout: 30
