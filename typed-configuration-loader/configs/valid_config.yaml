@@ -1,0 +1,21 @@
+app_name: "MyApp"
+environment: "production"
+debug: false
+
+database:
+  host: "db.example.com"
+  port: 5432
+  username: "app_user"
+  password: "secure_password"
+  database: "app_db"
+  max_connections: 20
+
+cache:
+  enabled: true
+  ttl_seconds: 600
+  max_size_mb: 256
+
+logging:
+  level: "INFO"
+  format: "json"
+  output_path: "/var/log/myapp.log"

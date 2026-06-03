@@ -1,0 +1,8 @@
+{
+  "app_name": "MinimalApp",
+  "database": {
+    "username": "user",
+    "password": "pass",
+    "database": "testdb"
+  }
+}

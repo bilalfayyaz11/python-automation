@@ -1,0 +1,8 @@
+app_name: "InvalidApp"
+environment: "testing"
+database:
+  host: ""
+  port: 99999
+  username: "user"
+  password: "pass"
+  database: "db"
