@@ -1,0 +1,39 @@
+Configuration Drift Report
+Generated: 20260604_041040
+============================================================
+
+File: hosts.baseline
+Drift Detected: False
+------------------------------------------------------------
+File: packages.baseline
+Drift Detected: False
+------------------------------------------------------------
+File: services.baseline
+Drift Detected: False
+------------------------------------------------------------
+File: app-config.baseline.yaml
+Drift Detected: True
+{
+  "values_changed": {
+    "root['application']['version']": {
+      "new_value": "1.1.0",
+      "old_value": "1.0.0"
+    },
+    "root['application']['environment']": {
+      "new_value": "staging",
+      "old_value": "production"
+    },
+    "root['database']['max_connections']": {
+      "new_value": 150,
+      "old_value": 100
+    },
+    "root['security']['token_expiry']": {
+      "new_value": 7200,
+      "old_value": 3600
+    }
+  },
+  "iterable_item_added": {
+    "root['security']['allowed_origins'][2]": "https://new.example.com"
+  }
+}
+------------------------------------------------------------

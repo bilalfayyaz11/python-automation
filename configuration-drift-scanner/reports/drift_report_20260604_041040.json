@@ -1,0 +1,49 @@
+{
+  "scan_timestamp": "20260604_041040",
+  "total_configs_scanned": 4,
+  "drifts_detected": 1,
+  "findings": [
+    {
+      "file": "hosts.baseline",
+      "drift_detected": false,
+      "differences": []
+    },
+    {
+      "file": "packages.baseline",
+      "drift_detected": false,
+      "differences": []
+    },
+    {
+      "file": "services.baseline",
+      "drift_detected": false,
+      "differences": []
+    },
+    {
+      "file": "app-config.baseline.yaml",
+      "drift_detected": true,
+      "differences": {
+        "values_changed": {
+          "root['application']['version']": {
+            "new_value": "1.1.0",
+            "old_value": "1.0.0"
+          },
+          "root['application']['environment']": {
+            "new_value": "staging",
+            "old_value": "production"
+          },
+          "root['database']['max_connections']": {
+            "new_value": 150,
+            "old_value": 100
+          },
+          "root['security']['token_expiry']": {
+            "new_value": 7200,
+            "old_value": 3600
+          }
+        },
+        "iterable_item_added": {
+          "root['security']['allowed_origins'][2]": "https://new.example.com"
+        }
+      }
+    }
+  ]
+}
