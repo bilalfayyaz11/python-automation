@@ -1,0 +1,16 @@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.10.160:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 118-291-264
+127.0.0.1 - - [04/Jun/2026 03:18:30] "[35m[1mPOST /jobs HTTP/1.1[0m" 201 -
+127.0.0.1 - - [04/Jun/2026 03:18:30] "GET /jobs HTTP/1.1" 200 -
+127.0.0.1 - - [04/Jun/2026 03:18:30] "GET /jobs?status=success HTTP/1.1" 200 -
+127.0.0.1 - - [04/Jun/2026 03:18:30] "GET /jobs?environment=prod HTTP/1.1" 200 -
+127.0.0.1 - - [04/Jun/2026 03:18:31] "GET /jobs/stats HTTP/1.1" 200 -
+127.0.0.1 - - [04/Jun/2026 03:18:31] "PUT /jobs/1 HTTP/1.1" 200 -
