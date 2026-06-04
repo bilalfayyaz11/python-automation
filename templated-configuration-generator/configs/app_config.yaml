@@ -1,0 +1,25 @@
+application:
+  name: myapp
+  environment: production
+  version: 1.0.0
+
+database:
+  host: db.internal.myapp.com
+  port: 5432
+  name: myapp_prod
+  pool_size: 20
+  ssl_mode: require
+
+cache:
+  enabled: True
+  type: redis
+  host: cache.internal.myapp.com
+  port: 6379
+  ttl: 3600
+
+logging:
+  level: INFO
+  format: json
+  outputs:
+    - file
+    - syslog

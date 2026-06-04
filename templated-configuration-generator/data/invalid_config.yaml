@@ -1,0 +1,21 @@
+app_name: testapp
+environment: development
+
+listen_port: 8080
+server_name: invalid.local
+ssl_enabled: false
+
+backend_servers:
+  - host: 127.0.0.1
+    port: 3000
+    weight: 1
+
+db_host: localhost
+db_port: 5432
+db_name: testdb
+
+cache_enabled: false
+
+log_level: DEBUG
+log_outputs:
+  - console

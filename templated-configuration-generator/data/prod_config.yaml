@@ -1,0 +1,40 @@
+app_name: myapp
+environment: production
+version: 1.0.0
+listen_port: 443
+server_name: myapp.com
+ssl_enabled: true
+ssl_cert_path: /etc/ssl/certs/myapp.crt
+ssl_key_path: /etc/ssl/private/myapp.key
+
+backend_servers:
+  - host: 10.0.1.10
+    port: 3000
+    weight: 2
+  - host: 10.0.1.11
+    port: 3000
+    weight: 2
+  - host: 10.0.1.12
+    port: 3000
+    weight: 1
+
+custom_headers:
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+
+db_host: db.internal.myapp.com
+db_port: 5432
+db_name: myapp_prod
+db_pool_size: 20
+
+cache_enabled: true
+cache_type: redis
+cache_host: cache.internal.myapp.com
+cache_port: 6379
+cache_ttl: 3600
+
+log_level: INFO
+log_format: json
+log_outputs:
+  - file
+  - syslog

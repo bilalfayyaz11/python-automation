@@ -1,0 +1,32 @@
+# Nginx Configuration for {{ app_name }}
+# Environment: {{ environment }}
+
+upstream {{ app_name }}_backend {
+{% for server in backend_servers %}
+    server {{ server.host }}:{{ server.port }} weight={{ server.weight | default(1) }};
+{% endfor %}
+}
+
+server {
+    listen {{ listen_port }};
+    server_name {{ server_name }};
+
+{% if ssl_enabled %}
+    ssl_certificate {{ ssl_cert_path }};
+    ssl_certificate_key {{ ssl_key_path }};
+{% endif %}
+
+    location / {
+        proxy_pass http://{{ app_name }}_backend;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+{% if custom_headers is defined and custom_headers %}
+{% for header, value in custom_headers.items() %}
+        proxy_set_header {{ header }} {{ value }};
+{% endfor %}
+{% endif %}
+    }
+
+    access_log /var/log/nginx/{{ app_name }}_access.log;
+    error_log /var/log/nginx/{{ app_name }}_error.log;
+}

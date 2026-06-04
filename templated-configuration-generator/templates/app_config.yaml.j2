@@ -1,0 +1,32 @@
+application:
+  name: {{ app_name }}
+  environment: {{ environment }}
+  version: {{ version }}
+
+database:
+  host: {{ db_host }}
+  port: {{ db_port }}
+  name: {{ db_name }}
+  pool_size: {{ db_pool_size | default(10) }}
+{% if environment == 'production' %}
+  ssl_mode: require
+{% else %}
+  ssl_mode: prefer
+{% endif %}
+
+cache:
+  enabled: {{ cache_enabled | default(true) }}
+{% if cache_enabled | default(true) %}
+  type: {{ cache_type | default('redis') }}
+  host: {{ cache_host }}
+  port: {{ cache_port | default(6379) }}
+  ttl: {{ cache_ttl | default(3600) }}
+{% endif %}
+
+logging:
+  level: {{ log_level | default('INFO') }}
+  format: {{ log_format | default('json') }}
+  outputs:
+{% for output in log_outputs %}
+    - {{ output }}
+{% endfor %}

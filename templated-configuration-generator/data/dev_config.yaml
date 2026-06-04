@@ -1,0 +1,26 @@
+app_name: myapp
+environment: development
+version: 1.0.0
+listen_port: 8080
+server_name: dev.myapp.local
+ssl_enabled: false
+
+backend_servers:
+  - host: 127.0.0.1
+    port: 3000
+    weight: 1
+
+db_host: localhost
+db_port: 5432
+db_name: myapp_dev
+db_pool_size: 5
+
+cache_enabled: true
+cache_host: localhost
+cache_port: 6379
+cache_ttl: 1800
+
+log_level: DEBUG
+log_outputs:
+  - console
+  - file
