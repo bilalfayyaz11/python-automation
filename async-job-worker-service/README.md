@@ -1,5 +1,6 @@
-Asynchronous Job Worker Service
-What This Does
+# Asynchronous Job Worker Service
+
+## What This Does
 
 This implementation provides a Python-based asynchronous job execution system using a Flask REST API, SQLite-backed job queue, and a polling worker service.
 
@@ -7,7 +8,9 @@ The API stores job requests, exposes job lifecycle endpoints, and allows externa
 
 This architecture mirrors how production platforms handle background automation outside the main request-response lifecycle.
 
-Architecture
+## Architecture
+
+```
 +----------------------+
 | External Client      |
 | curl / API Consumer  |
@@ -40,27 +43,30 @@ Architecture
   +--------+--------+
   |        |        |
   v        v        v
+```
 
-Backup Cleanup Report
+Backup   Cleanup   Report
 
-Prerequisites
-Ubuntu Linux
-Python 3.12+
-python3-pip
-python3-venv
-SQLite3
-curl
-Git
-Setup & Installation
+## Prerequisites
+
+* Ubuntu Linux
+* Python 3.12+
+* python3-pip
+* python3-venv
+* SQLite3
+* curl
+* Git
+
+## Setup & Installation
 
 sudo apt update
 
-sudo apt install -y
-python3
-python3-pip
-python3-venv
-sqlite3
-curl
+sudo apt install -y 
+python3 
+python3-pip 
+python3-venv 
+sqlite3 
+curl 
 git
 
 python3 -m venv venv
@@ -69,7 +75,7 @@ source venv/bin/activate
 
 pip install flask requests
 
-How to Reproduce
+## How to Reproduce
 
 Create the database:
 
@@ -95,41 +101,47 @@ Verify completion:
 
 sqlite3 jobs.db "SELECT id, job_type, status FROM jobs;"
 
-Tools Used
-Python
-Flask
-Requests
-SQLite
-Linux
-Bash
-REST APIs
-tar
-curl
-Key Skills Demonstrated
-REST API development
-Background worker implementation
-Asynchronous processing patterns
-Job queue architecture
-SQLite integration
-API-driven automation
-Linux systems automation
-Error handling and recovery
-Service orchestration
-Production troubleshooting
-Real-World Use Case
+## Tools Used
+
+* Python
+* Flask
+* Requests
+* SQLite
+* Linux
+* Bash
+* REST APIs
+* tar
+* curl
+
+## Key Skills Demonstrated
+
+* REST API development
+* Background worker implementation
+* Asynchronous processing patterns
+* Job queue architecture
+* SQLite integration
+* API-driven automation
+* Linux systems automation
+* Error handling and recovery
+* Service orchestration
+* Production troubleshooting
+
+## Real-World Use Case
 
 This pattern is widely used in DevOps platforms, CI/CD systems, infrastructure automation tools, monitoring platforms, backup orchestration systems, compliance scanning pipelines, and internal platform engineering services.
 
 Rather than executing long-running operations directly inside a web request, jobs are placed into a queue and processed independently by worker services. This improves reliability, scalability, and user experience.
 
-Lessons Learned
-Background workers should never block API requests.
-Job state transitions make troubleshooting significantly easier.
-Permission issues are common in automation workflows.
-Directory backups require different handling than file backups.
-Non-zero exit codes do not always indicate true failure.
-Worker services should be resilient to transient errors.
-Troubleshooting Log
+## Lessons Learned
+
+* Background workers should never block API requests.
+* Job state transitions make troubleshooting significantly easier.
+* Permission issues are common in automation workflows.
+* Directory backups require different handling than file backups.
+* Non-zero exit codes do not always indicate true failure.
+* Worker services should be resilient to transient errors.
+
+## Troubleshooting Log
 
 Issue:
 Backup job failed because destination path was /backup.
@@ -167,3 +179,4 @@ Worker correctly records failed jobs and does not automatically retry.
 Resolution:
 Reset status back to pending and reprocessed successfully.
 
+EOF
