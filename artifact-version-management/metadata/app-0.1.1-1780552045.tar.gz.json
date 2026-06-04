@@ -1,0 +1,23 @@
+{
+  "artifact": {
+    "name": "app-0.1.1-1780552045.tar.gz",
+    "version": "0.1.1",
+    "path": "builds/app-0.1.1-1780552045.tar.gz",
+    "size": 391,
+    "checksum": {
+      "algorithm": "sha256",
+      "value": "2eb9228fea571327ce7eb3019189a84da858c2b1000d578a3d97fa42c9356e48"
+    }
+  },
+  "build": {
+    "number": "1780552045",
+    "date": "2026-06-04T05:47:25Z",
+    "builder": "ubuntu@ip-172-31-10-188",
+    "os": "Ubuntu 24.04.3 LTS"
+  },
+  "source": {
+    "commit": "e9a9726ed3c25669f019be9b0054719b03532cc9",
+    "branch": "master",
+    "repository": "local"
+  }
+}
