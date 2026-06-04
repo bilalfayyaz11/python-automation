@@ -1,0 +1,31 @@
+jobs:
+  - name: init
+    command: "echo 'Initializing...'"
+    dependencies: []
+
+  - name: task_a
+    command: "sleep 1 && echo 'Task A done'"
+    dependencies:
+      - init
+
+  - name: task_b
+    command: "sleep 1 && echo 'Task B done'"
+    dependencies:
+      - init
+
+  - name: task_c
+    command: "sleep 1 && echo 'Task C done'"
+    dependencies:
+      - task_a
+      - task_b
+
+  - name: task_d
+    command: "sleep 1 && echo 'Task D done'"
+    dependencies:
+      - task_b
+
+  - name: finalize
+    command: "echo 'Pipeline complete'"
+    dependencies:
+      - task_c
+      - task_d

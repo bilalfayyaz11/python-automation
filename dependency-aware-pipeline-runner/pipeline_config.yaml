@@ -1,0 +1,36 @@
+jobs:
+  - name: checkout
+    command: "echo 'Checking out code...'"
+    dependencies: []
+
+  - name: install_deps
+    command: "echo 'Installing dependencies...'"
+    dependencies:
+      - checkout
+
+  - name: lint
+    command: "echo 'Running linter...'"
+    dependencies:
+      - install_deps
+
+  - name: unit_tests
+    command: "echo 'Running unit tests...'"
+    dependencies:
+      - install_deps
+
+  - name: integration_tests
+    command: "echo 'Running integration tests...'"
+    dependencies:
+      - unit_tests
+
+  - name: build
+    command: "echo 'Building application...'"
+    dependencies:
+      - lint
+      - unit_tests
+
+  - name: deploy
+    command: "echo 'Deploying application...'"
+    dependencies:
+      - build
+      - integration_tests
