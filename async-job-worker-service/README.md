@@ -179,4 +179,3 @@ Worker correctly records failed jobs and does not automatically retry.
 Resolution:
 Reset status back to pending and reprocessed successfully.
 
-EOF
