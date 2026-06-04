@@ -1,0 +1,16 @@
+service:
+  name: sshd
+  port: 22
+  state: running
+
+security:
+  permit_root_login: false
+  password_authentication: false
+  pubkey_authentication: true
+  max_auth_tries: 3
+
+hardening:
+  protocol: 2
+  x11_forwarding: false
+  use_pam: true
+  client_alive_interval: 300

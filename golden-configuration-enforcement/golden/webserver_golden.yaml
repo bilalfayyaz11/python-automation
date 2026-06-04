@@ -1,0 +1,26 @@
+service:
+  name: nginx
+  version: "1.18+"
+  state: running
+  enabled: true
+
+security:
+  firewall:
+    enabled: true
+    allowed_ports:
+      - 80
+      - 443
+  ssl:
+    enabled: true
+    min_tls_version: "1.2"
+
+network:
+  listen_address: "0.0.0.0"
+  max_connections: 1024
+  timeout: 30
+
+logging:
+  level: "info"
+  path: "/var/log/nginx"
+  rotation: "daily"
+  retention_days: 30
