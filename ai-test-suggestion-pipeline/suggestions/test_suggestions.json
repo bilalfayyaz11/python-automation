@@ -1,0 +1,93 @@
+{
+  "repository": "./sample_project",
+  "commit_range": "HEAD~1..HEAD",
+  "files_analyzed": [
+    "calculator.py"
+  ],
+  "total_functions": 4,
+  "suggestions": {
+    "calculator.py": [
+      {
+        "function": "add",
+        "params": [
+          "a",
+          "b"
+        ],
+        "complexity": {
+          "branches": 0,
+          "loops": 0,
+          "try_blocks": 0,
+          "cyclomatic_estimate": 1,
+          "risk": "low"
+        },
+        "suggestions": [
+          {
+            "type": "ai_recommendation",
+            "description": "AI model unavailable. Generated deterministic suggestions: test normal valid inputs, invalid inputs, boundary values, exception paths, and branch-specific behavior."
+          }
+        ]
+      },
+      {
+        "function": "divide",
+        "params": [
+          "a",
+          "b"
+        ],
+        "complexity": {
+          "branches": 1,
+          "loops": 0,
+          "try_blocks": 0,
+          "cyclomatic_estimate": 2,
+          "risk": "low"
+        },
+        "suggestions": [
+          {
+            "type": "ai_recommendation",
+            "description": "AI model unavailable. Generated deterministic suggestions: test normal valid inputs, invalid inputs, boundary values, exception paths, and branch-specific behavior."
+          }
+        ]
+      },
+      {
+        "function": "calculate_discount",
+        "params": [
+          "price",
+          "discount_percent"
+        ],
+        "complexity": {
+          "branches": 1,
+          "loops": 0,
+          "try_blocks": 0,
+          "cyclomatic_estimate": 2,
+          "risk": "low"
+        },
+        "suggestions": [
+          {
+            "type": "ai_recommendation",
+            "description": "AI model unavailable. Generated deterministic suggestions: test normal valid inputs, invalid inputs, boundary values, exception paths, and branch-specific behavior."
+          }
+        ]
+      },
+      {
+        "function": "calculate_tax",
+        "params": [
+          "amount",
+          "tax_rate",
+          "region"
+        ],
+        "complexity": {
+          "branches": 4,
+          "loops": 0,
+          "try_blocks": 0,
+          "cyclomatic_estimate": 5,
+          "risk": "medium"
+        },
+        "suggestions": [
+          {
+            "type": "ai_recommendation",
+            "description": "AI model unavailable. Generated deterministic suggestions: test normal valid inputs, invalid inputs, boundary values, exception paths, and branch-specific behavior."
+          }
+        ]
+      }
+    ]
+  }
+}
