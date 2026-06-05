@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-06-05T22:29:35.248819+00:00",
+  "hostname": "ip-172-31-10-10",
+  "system_info": {
+    "os_release": {
+      "PRETTY_NAME": "Ubuntu 24.04.3 LTS",
+      "NAME": "Ubuntu",
+      "VERSION_ID": "24.04",
+      "VERSION": "24.04.3 LTS (Noble Numbat)",
+      "VERSION_CODENAME": "noble",
+      "ID": "ubuntu",
+      "ID_LIKE": "debian",
+      "HOME_URL": "https://www.ubuntu.com/",
+      "SUPPORT_URL": "https://help.ubuntu.com/",
+      "BUG_REPORT_URL": "https://bugs.launchpad.net/ubuntu/",
+      "PRIVACY_POLICY_URL": "https://www.ubuntu.com/legal/terms-and-policies/privacy-policy",
+      "UBUNTU_CODENAME": "noble",
+      "LOGO": "ubuntu-logo"
+    },
+    "kernel": "6.14.0-1018-aws",
+    "cpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           48 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  2\nOn-line CPU(s) list:                     0,1\nVendor ID:                               AuthenticAMD\nModel name:                              AMD EPYC 7571\nCPU family:                              23\nModel:                                   1\nThread(s) per core:                      2\nCore(s) per socket:                      1\nSocket(s):                               1\nStepping:                                2\nBogoMIPS:                                4399.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch topoext vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr arat npt nrip_save\nHypervisor vendor:                       KVM\nVirtualization type:                     full\nL1d cache:                               32 KiB (1 instance)\nL1i cache:                               64 KiB (1 instance)\nL2 cache:                                512 KiB (1 instance)\nL3 cache:                                8 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0,1\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Mitigation; untrained return thunk; SMT vulnerable\nVulnerability Spec rstack overflow:      Vulnerable: Safe RET, no microcode\nVulnerability Spec store bypass:         Vulnerable\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Retpolines; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected",
+    "memory": "total        used        free      shared  buff/cache   available\nMem:           7.7Gi       2.7Gi       238Mi       9.8Mi       5.0Gi       5.0Gi\nSwap:             0B          0B          0B"
+  },
+  "services": [
+    {
+      "name": "ssh",
+      "active_state": "active",
+      "status_summary": "\u25cf ssh.service - OpenBSD Secure Shell server\n     Loaded: loaded (/usr/lib/systemd/system/ssh.service; disabled; preset: enabled)\n    Drop-In: /usr/lib/systemd/system/ssh.service.d\n             \u2514\u2500ec2-instance-connect.conf\n     Active: active (running) since Fri 2026-06-05 22:17:56 UTC; 11min ago\nTriggeredBy: \u25cf ssh.socket\n       Docs: man:sshd(8)\n             man:sshd_config(5)\n   Main PID: 6133 (sshd)\n      Tasks: 1 (limit: 9178)\n     Memory: 1.2M (peak: 1.5M)\n        CPU: 48ms",
+      "exit_code": 0
+    },
+    {
+      "name": "cron",
+      "active_state": "active",
+      "status_summary": "\u25cf cron.service - Regular background program processing daemon\n     Loaded: loaded (/usr/lib/systemd/system/cron.service; enabled; preset: enabled)\n     Active: active (running) since Fri 2026-06-05 22:17:55 UTC; 11min ago\n       Docs: man:cron(8)\n   Main PID: 6036 (cron)\n      Tasks: 1 (limit: 9178)\n     Memory: 364.0K (peak: 1.8M)\n        CPU: 19ms\n     CGroup: /system.slice/cron.service\n             \u2514\u25006036 /usr/sbin/cron -f -P\n\nJun 05 22:17:55 ip-172-31-10-10 (cron)[6036]: cron.service: Referenced but unset environment variable evaluates to an empty string: EXTRA_OPTS",
+      "exit_code": 0
+    },
+    {
+      "name": "systemd-journald",
+      "active_state": "active",
+      "status_summary": "\u25cf systemd-journald.service - Journal Service\n     Loaded: loaded (/usr/lib/systemd/system/systemd-journald.service; static)\n    Drop-In: /usr/lib/systemd/system/systemd-journald.service.d\n             \u2514\u2500nice.conf\n     Active: active (running) since Fri 2026-06-05 22:17:56 UTC; 11min ago\nTriggeredBy: \u25cb systemd-journald-audit.socket\n             \u25cf systemd-journald.socket\n             \u25cf systemd-journald-dev-log.socket\n       Docs: man:systemd-journald.service(8)\n             man:journald.conf(5)\n   Main PID: 6089 (systemd-journal)\n     Status: \"Processing requests...\"",
+      "exit_code": 0
+    }
+  ],
+  "network": {
+    "interfaces": "lo               UNKNOWN        127.0.0.1/8 ::1/128 \nens5             UP             172.31.10.10/24 fe80::8ff:eeff:fe2d:37e3/64",
+    "listening_ports": "State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess\nLISTEN 0      512        127.0.0.1:41737      0.0.0.0:*          \nLISTEN 0      4096   127.0.0.53%lo:53         0.0.0.0:*          \nLISTEN 0      4096      127.0.0.54:53         0.0.0.0:*          \nLISTEN 0      10           0.0.0.0:8443       0.0.0.0:*          \nLISTEN 0      4096         0.0.0.0:22         0.0.0.0:*          \nLISTEN 0      4096       127.0.0.1:11434      0.0.0.0:*          \nLISTEN 0      10              [::]:8443          [::]:*          \nLISTEN 0      4096            [::]:22            [::]:*"
+  },
+  "disk": {
+    "disk_usage": "Filesystem       Size  Used Avail Use% Mounted on\n/dev/root         29G   11G   18G  39% /\ntmpfs            3.9G  8.0K  3.9G   1% /dev/shm\ntmpfs            1.6G  1.3M  1.6G   1% /run\ntmpfs            5.0M     0  5.0M   0% /run/lock\nefivarfs         128K  4.1K  119K   4% /sys/firmware/efi/efivars\n/dev/nvme0n1p16  881M  240M  580M  30% /boot\n/dev/nvme0n1p15  105M  6.2M   99M   6% /boot/efi\ntmpfs            785M  120K  785M   1% /run/user/1000",
+    "inode_usage": "Filesystem       Inodes  IUsed   IFree IUse% Mounted on\n/dev/root       3801088 262467 3538621    7% /\ntmpfs           1003897      3 1003894    1% /dev/shm\ntmpfs            819200    905  818295    1% /run\ntmpfs           1003897      3 1003894    1% /run/lock\nefivarfs              0      0       0     - /sys/firmware/efi/efivars\n/dev/nvme0n1p16   58496    613   57883    2% /boot\n/dev/nvme0n1p15       0      0       0     - /boot/efi\ntmpfs            200779    154  200625    1% /run/user/1000"
+  }
+}

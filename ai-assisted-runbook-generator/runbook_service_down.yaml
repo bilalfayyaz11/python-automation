@@ -1,0 +1,27 @@
+title: 'Operational Runbook: A web service is not responding to requests'
+created: '2026-06-05T22:29:35.362953+00:00'
+hostname: ip-172-31-10-10
+scenario: A web service is not responding to requests
+system:
+  os_version: Ubuntu 24.04.3 LTS
+  kernel: 6.14.0-1018-aws
+procedure: '1. Confirm service status with: systemctl status <service> --no-pager
+
+  2. Check listening ports with: ss -tlnp
+
+  3. Review recent logs with: journalctl -u <service> -n 50 --no-pager
+
+  4. Validate configuration before restart.
+
+  5. Restart service only after confirming the failure cause.
+
+  6. Verify recovery with curl or service-specific health check.'
+verification:
+- Confirm affected resource is stable
+- Review logs for repeated errors
+- Validate system state
+- Document root cause
+rollback:
+- Revert risky changes
+- Preserve evidence
+- Escalate if recovery fails

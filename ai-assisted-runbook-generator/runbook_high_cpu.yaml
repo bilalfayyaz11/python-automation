@@ -1,0 +1,29 @@
+title: 'Operational Runbook: CPU usage is at 95% and application response time is
+  degraded'
+created: '2026-06-05T22:29:34.976166+00:00'
+hostname: ip-172-31-10-10
+scenario: CPU usage is at 95% and application response time is degraded
+system:
+  os_version: Ubuntu 24.04.3 LTS
+  kernel: 6.14.0-1018-aws
+procedure: '1. Confirm current CPU load with: top -bn1 | head -20
+
+  2. Identify expensive processes with: ps aux --sort=-%cpu | head -10
+
+  3. Check system load with: uptime
+
+  4. Review service logs with: journalctl -xe --no-pager | tail -50
+
+  5. If one process is clearly runaway, document PID before restarting or stopping
+  it.
+
+  6. Verify recovery with: top -bn1 | head -10'
+verification:
+- Confirm affected resource is stable
+- Review logs for repeated errors
+- Validate system state
+- Document root cause
+rollback:
+- Revert risky changes
+- Preserve evidence
+- Escalate if recovery fails
