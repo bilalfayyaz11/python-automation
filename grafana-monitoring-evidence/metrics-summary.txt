@@ -1,0 +1,41 @@
+=== Grafana Dashboard Evidence Summary ===
+
+Timestamp: Fri Jun  5 21:18:16 UTC 2026
+
+Services:
+active
+active
+active
+
+Prometheus Targets:
+{
+  "job": "node",
+  "health": "up"
+}
+{
+  "job": "prometheus",
+  "health": "up"
+}
+
+Dashboards:
+{
+  "title": "Monitoring Health",
+  "uid": "monitoring-health"
+}
+{
+  "title": "System Performance Overview",
+  "uid": "system-performance-overview"
+}
+
+Sample Metrics:
+CPU Query:
+
+
+Memory:
+               total        used        free      shared  buff/cache   available
+Mem:           7.7Gi       1.5Gi       2.7Gi        21Mi       3.8Gi       6.2Gi
+Swap:             0B          0B          0B
+
+Disk:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        29G  9.4G   19G  34% /
