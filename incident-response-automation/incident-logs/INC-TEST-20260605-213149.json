@@ -1,0 +1,18 @@
+{
+  "incident_id": "INC-TEST-20260605-213149",
+  "incident_type": "test",
+  "severity": "low",
+  "status": "resolved",
+  "started_at": "2026-06-05T21:31:49Z",
+  "closed_at": "2026-06-05T21:31:49Z",
+  "duration_seconds": 0,
+  "actions": [
+    {
+      "timestamp": "2026-06-05T21:31:49Z",
+      "action": "Logger test",
+      "result": "success"
+    }
+  ],
+  "resolution": "Logger verified",
+  "root_cause": "Validation run"
+}

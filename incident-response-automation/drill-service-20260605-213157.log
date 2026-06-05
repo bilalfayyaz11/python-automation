@@ -1,0 +1,148 @@
+[2026-06-05 21:31:57] Starting service drill
+[2026-06-05 21:31:57] === System State Capture ===
+
+Date:
+Fri Jun  5 21:31:57 UTC 2026
+
+Disk:
+Filesystem       Size  Used Avail Use% Mounted on
+/dev/root         29G  7.7G   21G  28% /
+tmpfs            3.9G  1.1M  3.9G   1% /dev/shm
+tmpfs            1.6G  1.3M  1.6G   1% /run
+tmpfs            5.0M     0  5.0M   0% /run/lock
+efivarfs         128K  4.1K  119K   4% /sys/firmware/efi/efivars
+/dev/nvme0n1p16  881M  240M  580M  30% /boot
+/dev/nvme0n1p15  105M  6.2M   99M   6% /boot/efi
+tmpfs            785M  124K  785M   1% /run/user/1000
+
+Memory:
+               total        used        free      shared  buff/cache   available
+Mem:           7.7Gi       1.3Gi       4.0Gi        22Mi       2.6Gi       6.3Gi
+Swap:             0B          0B          0B
+
+CPU:
+top - 21:31:57 up 9 min,  2 users,  load average: 0.07, 0.40, 0.33
+Tasks: 217 total,   1 running, 216 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  4.2 us,  8.3 sy,  0.0 ni, 83.3 id,  0.0 wa,  0.0 hi,  0.0 si,  4.2 st 
+MiB Mem :   7842.9 total,   4145.4 free,   1344.0 used,   2695.2 buff/cache     
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6498.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   8819 dcv       20   0  634088  48444  40364 S   9.1   0.6   0:03.36 dcvserv+
+  11512 ubuntu    20   0   12332   5500   3356 R   9.1   0.1   0:00.02 top
+      1 root      20   0   23332  14788   9728 S   0.0   0.2   0:12.38 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd
+      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_wo+
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+
+Ports:
+LISTEN 0      511          0.0.0.0:80        0.0.0.0:*    users:(("nginx",pid=11024,fd=7),("nginx",pid=11023,fd=7),("nginx",pid=11022,fd=7))
+LISTEN 0      511          0.0.0.0:8080      0.0.0.0:*    users:(("nginx",pid=11024,fd=9),("nginx",pid=11023,fd=9),("nginx",pid=11022,fd=9))
+LISTEN 0      200        127.0.0.1:5432      0.0.0.0:*    users:(("postgres",pid=10374,fd=6))                                               
+LISTEN 0      511             [::]:80           [::]:*    users:(("nginx",pid=11024,fd=8),("nginx",pid=11023,fd=8),("nginx",pid=11022,fd=8))
+
+Nginx:
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; preset: enabled)
+     Active: active (running) since Fri 2026-06-05 21:30:42 UTC; 1min 14s ago
+       Docs: man:nginx(8)
+    Process: 11019 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 11021 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+   Main PID: 11022 (nginx)
+      Tasks: 3 (limit: 9178)
+     Memory: 2.4M (peak: 2.7M)
+        CPU: 27ms
+     CGroup: /system.slice/nginx.service
+             ├─11022 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+Triggering service crash incident...
+Service crash incident triggered
+[2026-06-05 21:31:57] Investigating service failure
+2026/06/05 21:31:57 [emerg] 11543#11543: host not found in "BROKEN_PORT" of the "listen" directive in /etc/nginx/sites-enabled/incident-app:2
+nginx: configuration file /etc/nginx/nginx.conf test failed
+Jun 05 21:25:41 ip-172-31-10-115 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Jun 05 21:25:41 ip-172-31-10-115 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Jun 05 21:27:20 ip-172-31-10-115 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Jun 05 21:27:20 ip-172-31-10-115 systemd[1]: nginx.service: Deactivated successfully.
+Jun 05 21:27:20 ip-172-31-10-115 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Jun 05 21:27:20 ip-172-31-10-115 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Jun 05 21:27:20 ip-172-31-10-115 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Jun 05 21:30:42 ip-172-31-10-115 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Jun 05 21:30:42 ip-172-31-10-115 systemd[1]: nginx.service: Deactivated successfully.
+Jun 05 21:30:42 ip-172-31-10-115 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Jun 05 21:30:42 ip-172-31-10-115 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Jun 05 21:30:42 ip-172-31-10-115 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Jun 05 21:31:57 ip-172-31-10-115 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Jun 05 21:31:57 ip-172-31-10-115 systemd[1]: nginx.service: Deactivated successfully.
+Jun 05 21:31:57 ip-172-31-10-115 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+[2026-06-05 21:31:57] Restoring nginx configuration
+HTTP/1.1 200 OK
+Server: nginx/1.24.0 (Ubuntu)
+Date: Fri, 05 Jun 2026 21:31:57 GMT
+Content-Type: text/html
+Content-Length: 151
+Last-Modified: Fri, 05 Jun 2026 21:26:44 GMT
+Connection: keep-alive
+ETag: "6a233f14-97"
+Accept-Ranges: bytes
+
+[2026-06-05 21:31:57] === System State Capture ===
+
+Date:
+Fri Jun  5 21:31:57 UTC 2026
+
+Disk:
+Filesystem       Size  Used Avail Use% Mounted on
+/dev/root         29G  7.7G   21G  28% /
+tmpfs            3.9G  1.1M  3.9G   1% /dev/shm
+tmpfs            1.6G  1.3M  1.6G   1% /run
+tmpfs            5.0M     0  5.0M   0% /run/lock
+efivarfs         128K  4.1K  119K   4% /sys/firmware/efi/efivars
+/dev/nvme0n1p16  881M  240M  580M  30% /boot
+/dev/nvme0n1p15  105M  6.2M   99M   6% /boot/efi
+tmpfs            785M  124K  785M   1% /run/user/1000
+
+Memory:
+               total        used        free      shared  buff/cache   available
+Mem:           7.7Gi       1.3Gi       4.0Gi        22Mi       2.6Gi       6.3Gi
+Swap:             0B          0B          0B
+
+CPU:
+top - 21:31:57 up 9 min,  2 users,  load average: 0.07, 0.40, 0.33
+Tasks: 217 total,   1 running, 216 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  4.3 sy,  0.0 ni, 91.3 id,  0.0 wa,  0.0 hi,  0.0 si,  4.3 st 
+MiB Mem :   7842.9 total,   4143.9 free,   1345.5 used,   2695.2 buff/cache     
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6497.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   2586 ubuntu    20   0   15852   7704   5128 S   8.3   0.1   0:00.58 sshd
+      1 root      20   0   23332  14788   9728 S   0.0   0.2   0:12.40 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd
+      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_wo+
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+
+Ports:
+LISTEN 0      511          0.0.0.0:80        0.0.0.0:*    users:(("nginx",pid=11565,fd=7),("nginx",pid=11564,fd=7),("nginx",pid=11563,fd=7))
+LISTEN 0      511          0.0.0.0:8080      0.0.0.0:*    users:(("nginx",pid=11565,fd=9),("nginx",pid=11564,fd=9),("nginx",pid=11563,fd=9))
+LISTEN 0      200        127.0.0.1:5432      0.0.0.0:*    users:(("postgres",pid=10374,fd=6))                                               
+LISTEN 0      511             [::]:80           [::]:*    users:(("nginx",pid=11565,fd=8),("nginx",pid=11564,fd=8),("nginx",pid=11563,fd=8))
+
+Nginx:
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; preset: enabled)
+     Active: active (running) since Fri 2026-06-05 21:31:57 UTC; 343ms ago
+       Docs: man:nginx(8)
+    Process: 11560 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 11561 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+   Main PID: 11563 (nginx)
+      Tasks: 3 (limit: 9178)
+     Memory: 2.4M (peak: 2.9M)
+        CPU: 22ms
+     CGroup: /system.slice/nginx.service
+             ├─11563 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+[2026-06-05 21:31:58] service drill completed
+[2026-06-05 21:31:58] Review log: drill-service-20260605-213157.log
