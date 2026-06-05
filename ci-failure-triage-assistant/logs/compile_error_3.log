@@ -1,0 +1,6 @@
+[2024-01-15 14:20:10] INFO: Compiling Java sources
+[2024-01-15 14:20:15] ERROR: src/main/java/com/example/Service.java:23: error: cannot find symbol
+[2024-01-15 14:20:15] ERROR:   symbol:   class DatabaseConnection
+[2024-01-15 14:20:15] ERROR:   location: class Service
+[2024-01-15 14:20:15] ERROR: 1 error
+[2024-01-15 14:20:15] FATAL: Compilation failed

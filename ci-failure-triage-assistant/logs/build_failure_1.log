@@ -1,0 +1,7 @@
+[2024-01-15 10:23:45] INFO: Starting build process
+[2024-01-15 10:23:46] INFO: Checking out repository
+[2024-01-15 10:23:50] INFO: Installing dependencies
+[2024-01-15 10:24:15] ERROR: npm ERR! code ENOTFOUND
+[2024-01-15 10:24:15] ERROR: npm ERR! network request to https://registry.npmjs.org/express failed
+[2024-01-15 10:24:15] ERROR: npm ERR! network This is a problem related to network connectivity
+[2024-01-15 10:24:15] FATAL: Build failed with exit code 1

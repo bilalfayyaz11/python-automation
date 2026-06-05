@@ -1,0 +1,7 @@
+[2024-01-15 11:15:30] INFO: Running test suite
+[2024-01-15 11:15:35] INFO: Test: user_authentication_test
+[2024-01-15 11:15:36] PASS: test_valid_login
+[2024-01-15 11:15:37] FAIL: test_invalid_password
+[2024-01-15 11:15:37] ERROR: AssertionError: Expected status code 401, got 500
+[2024-01-15 11:15:37] ERROR: at UserAuthTest.test_invalid_password (auth_test.py:45)
+[2024-01-15 11:15:38] INFO: Tests completed: 1 passed, 1 failed

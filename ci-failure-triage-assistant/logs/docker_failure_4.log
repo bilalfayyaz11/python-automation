@@ -1,0 +1,4 @@
+[2024-01-15 16:30:00] INFO: Building Docker image
+[2024-01-15 16:30:05] ERROR: Error response from daemon: pull access denied for myapp/backend
+[2024-01-15 16:30:05] ERROR: repository does not exist or may require 'docker login'
+[2024-01-15 16:30:05] FATAL: Docker build failed

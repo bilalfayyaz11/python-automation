@@ -1,0 +1,67 @@
+patterns:
+  - name: "Network/Dependency Download Failure"
+    keywords:
+      - "ENOTFOUND"
+      - "network request"
+      - "network connectivity"
+      - "failed to fetch"
+      - "connection timeout"
+    severity: "high"
+    suggestions:
+      - "Check network connectivity and firewall rules"
+      - "Verify package registry is accessible"
+      - "Review proxy settings if applicable"
+      - "Check for rate limiting or authentication issues"
+
+  - name: "Test Assertion Failure"
+    keywords:
+      - "AssertionError"
+      - "FAIL:"
+      - "Expected status code"
+      - "test_invalid"
+    severity: "medium"
+    suggestions:
+      - "Review recent code changes affecting the failing test"
+      - "Check if test data or fixtures have changed"
+      - "Verify environment-specific configurations"
+      - "Run test locally to reproduce the issue"
+
+  - name: "Compilation Error"
+    keywords:
+      - "cannot find symbol"
+      - "Compilation failed"
+      - "undefined reference"
+      - "symbol:"
+      - "location:"
+    severity: "high"
+    suggestions:
+      - "Check for missing imports or dependencies"
+      - "Verify all required libraries are included"
+      - "Review recent code changes for syntax errors"
+      - "Ensure build configuration is correct"
+
+  - name: "Memory/Resource Exhaustion"
+    keywords:
+      - "OutOfMemoryError"
+      - "resource exhausted"
+      - "heap space"
+      - "Killed process"
+    severity: "critical"
+    suggestions:
+      - "Increase memory allocation for build process"
+      - "Check for memory leaks in tests"
+      - "Review resource-intensive operations"
+      - "Consider splitting large build jobs"
+
+  - name: "Docker Build Failure"
+    keywords:
+      - "docker build failed"
+      - "pull access denied"
+      - "manifest unknown"
+      - "docker login"
+    severity: "high"
+    suggestions:
+      - "Verify Docker registry credentials"
+      - "Check image name and tag spelling"
+      - "Ensure Docker daemon is running"
+      - "Review Docker registry permissions"
