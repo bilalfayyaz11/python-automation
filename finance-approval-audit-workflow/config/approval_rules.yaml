@@ -1,0 +1,19 @@
+approval_gates:
+  - name: "budget_review"
+    threshold: 1000
+    approvers:
+      - "finance_manager"
+      - "team_lead"
+    required_approvals: 2
+
+  - name: "infrastructure_cost"
+    threshold: 5000
+    approvers:
+      - "finance_manager"
+      - "cto"
+    required_approvals: 2
+
+audit_settings:
+  log_directory: "logs"
+  retention_days: 90
+  log_format: "jsonl"

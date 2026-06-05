@@ -1,0 +1,22 @@
+{
+  "requests": {
+    "REQ001": {
+      "request_id": "REQ001",
+      "amount": 2000.0,
+      "requester": "dev_user",
+      "description": "Infrastructure deployment",
+      "gate": "budget_review",
+      "authorized_approvers": [
+        "finance_manager",
+        "team_lead"
+      ],
+      "required_approvals": 2,
+      "approvals": [
+        "finance_manager",
+        "team_lead"
+      ],
+      "status": "approved",
+      "created_at": "2026-06-05T23:22:13.146614Z"
+    }
+  }
+}
