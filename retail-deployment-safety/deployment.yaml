@@ -1,0 +1,20 @@
+deployment:
+  app_name: retail-app
+  port: 5000
+
+  health_check:
+    endpoint: /health
+    timeout: 5
+    retries: 3
+    interval: 2
+
+  readiness_check:
+    endpoint: /ready
+    timeout: 5
+    retries: 5
+    interval: 3
+
+  rollback:
+    enabled: true
+    on_failure: true
+    keep_previous: true
