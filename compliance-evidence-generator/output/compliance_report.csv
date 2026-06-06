@@ -1,0 +1,16 @@
+timestamp,evidence_type,description,status,return_code,command
+2026-06-06T01:29:32.807131,system_logs,Recent system journal logs,success,0,journalctl -n 100 --no-pager
+2026-06-06T01:29:32.807131,system_logs,Running system services,success,0,systemctl list-units --type=service --state=running --no-pager
+2026-06-06T01:29:32.807131,system_logs,Compliance-specific system log events,success,0,logger -t compliance-evidence 'System log evidence collection executed' && journalctl -t compliance-evidence -n 10 --no-pager
+2026-06-06T01:29:34.533262,access_logs,Recent login sessions,success,0,last -n 50
+2026-06-06T01:29:34.533262,access_logs,Currently logged-in users,success,0,who
+2026-06-06T01:29:34.533262,access_logs,Recent failed login attempts,success,0,lastb -n 20 2>/dev/null || true
+2026-06-06T01:29:34.533262,access_logs,Local user account snapshot,success,0,getent passwd | head -30
+2026-06-06T01:29:34.557797,configuration_snapshots,Host identity and operating system details,success,0,hostnamectl
+2026-06-06T01:29:34.557797,configuration_snapshots,Network interface configuration,success,0,ip addr
+2026-06-06T01:29:34.557797,configuration_snapshots,Firewall rules snapshot,success,0,sudo iptables -L -n 2>/dev/null || sudo nft list ruleset 2>/dev/null || true
+2026-06-06T01:29:34.557797,configuration_snapshots,Installed package inventory sample,success,0,dpkg -l | head -50
+2026-06-06T01:29:34.557797,configuration_snapshots,Kernel and platform information,success,0,uname -a
+2026-06-06T01:29:34.848552,security_events,Recent warning-level system events,success,0,journalctl -p warning -n 50 --no-pager
+2026-06-06T01:29:34.848552,security_events,Security-relevant configuration files,success,0,find /etc -maxdepth 1 -type f -name '*conf' | head -20
+2026-06-06T01:29:34.848552,security_events,Enabled service inventory,success,0,systemctl list-unit-files --state=enabled --no-pager | head -50

@@ -1,0 +1,59 @@
+[
+  {
+    "timestamp": "2026-06-06T01:29:34.532817",
+    "event_type": "evidence_collection",
+    "evidence_type": "system_logs",
+    "status": "success",
+    "details": {
+      "records": 3
+    }
+  },
+  {
+    "timestamp": "2026-06-06T01:29:34.557282",
+    "event_type": "evidence_collection",
+    "evidence_type": "access_logs",
+    "status": "success",
+    "details": {
+      "records": 4
+    }
+  },
+  {
+    "timestamp": "2026-06-06T01:29:34.848097",
+    "event_type": "evidence_collection",
+    "evidence_type": "configuration_snapshots",
+    "status": "success",
+    "details": {
+      "records": 5
+    }
+  },
+  {
+    "timestamp": "2026-06-06T01:29:38.652565",
+    "event_type": "evidence_collection",
+    "evidence_type": "security_events",
+    "status": "success",
+    "details": {
+      "records": 3
+    }
+  },
+  {
+    "timestamp": "2026-06-06T01:29:38.655011",
+    "event_type": "report_generation",
+    "report_type": "json",
+    "output_path": "/home/ubuntu/compliance-evidence-generator/output/compliance_report.json",
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-06-06T01:29:38.655370",
+    "event_type": "report_generation",
+    "report_type": "html",
+    "output_path": "/home/ubuntu/compliance-evidence-generator/output/compliance_report.html",
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-06-06T01:29:38.655940",
+    "event_type": "report_generation",
+    "report_type": "csv",
+    "output_path": "/home/ubuntu/compliance-evidence-generator/output/compliance_report.csv",
+    "status": "success"
+  }
+]

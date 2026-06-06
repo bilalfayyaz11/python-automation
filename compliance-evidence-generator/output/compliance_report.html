@@ -1,0 +1,291 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Compliance Evidence Report</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; }
+                table { border-collapse: collapse; width: 100%; }
+                th, td { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: top; }
+                th { background-color: #4CAF50; color: white; }
+                pre { white-space: pre-wrap; max-height: 250px; overflow: auto; }
+            </style>
+        </head>
+        <body>
+            <h1>Compliance Evidence Report</h1>
+            <p>Generated: 2026-06-06T01:29:38.654435</p>
+
+            <h2>Evidence Summary</h2>
+            <ul>
+                <li>Total Evidence Groups: 4</li>
+                <li>Total Evidence Records: 15</li>
+                <li>Status Counts: {'success': 15}</li>
+                <li>Evidence Types: {'system_logs': 1, 'access_logs': 1, 'configuration_snapshots': 1, 'security_events': 1}</li>
+            </ul>
+
+            <h2>Detailed Evidence</h2>
+            <table>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Evidence Type</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Output Preview</th>
+                </tr>
+                
+                <tr>
+                    <td>2026-06-06T01:29:32.807131</td>
+                    <td>system_logs</td>
+                    <td>Recent system journal logs</td>
+                    <td>success</td>
+                    <td><pre>Jun 06 01:29:18 ip-172-31-10-203 gnome-shell[1723]: Window manager warning: Overwriting existing binding of keysym 32 with keysym 32 (keycode b).
+Jun 06 01:29:18 ip-172-31-10-203 gnome-shell[1723]: Window manager warning: Overwriting existing binding of keysym 36 with keysym 36 (keycode f).
+Jun 06 01:29:18 ip-172-31-10-203 gnome-shell[1723]: Window manager warning: Overwriting existing binding of keysym 36 with keysym 36 (keycode f).
+Jun 06 01:29:18 ip-172-31-10-203 gnome-shell[1723]: Window manager warning: Overwriting existing binding of keysym 32 with keysym 32 (keycode b).
+Jun 06 01:29:18 ip-172-31-10-203 gnome-shell[1723]: Window manager warning: Overwriting existing binding of keysym 35 with keysym 35 (keycode e).
+Jun 06 01:29:18 ip-172-31-10-203 gnome-shell[1723]: Window manager warning: Overwriting existing binding of keysym 35 with keysym 35 (keycode e).
+Jun 06 01:29:18 ip-172-31-10-203 gnome-shell[1723]: Window manager warning: Overwriting existing binding of keysym 37 with k</pre></td>
+                </tr>
+                
+                <tr>
+                    <td>2026-06-06T01:29:32.807131</td>
+                    <td>system_logs</td>
+                    <td>Running system services</td>
+                    <td>success</td>
+                    <td><pre>UNIT                                           LOAD   ACTIVE SUB     DESCRIPTION
+  accounts-daemon.service                        loaded active running Accounts Service
+  acpid.service                                  loaded active running ACPI event daemon
+  amazon-cloudwatch-agent.service                loaded active running Amazon CloudWatch Agent
+  anacron.service                                loaded active running Run anacron jobs
+  atd.service                                    loaded active running Deferred execution scheduler
+  avahi-daemon.service                           loaded active running Avahi mDNS/DNS-SD Stack
+  chrony.service                                 loaded active running chrony, an NTP client/server
+  colord.service                                 loaded active running Manage, Install and Generate Color Profiles
+  cron.service                                   loaded active running Regular background program processing daemon
+  dbus.service                   </pre></td>
+                </tr>
+                
+                <tr>
+                    <td>2026-06-06T01:29:32.807131</td>
+                    <td>system_logs</td>
+                    <td>Compliance-specific system log events</td>
+                    <td>success</td>
+                    <td><pre>Jun 06 01:29:34 ip-172-31-10-203 compliance-evidence[6368]: System log evidence collection executed</pre></td>
+                </tr>
+                
+                <tr>
+                    <td>2026-06-06T01:29:34.533262</td>
+                    <td>access_logs</td>
+                    <td>Recent login sessions</td>
+                    <td>success</td>
+                    <td><pre>ubuntu   pts/0        202.47.51.242    Sat Jun  6 01:26   still logged in
+ubuntu   :0           :0               Sat Jun  6 01:25   still logged in
+ubuntu   seat0        login screen     Sat Jun  6 01:25   still logged in
+reboot   system boot  6.14.0-1018-aws  Sat Jun  6 01:24   still running
+ubuntu   pts/0        154.192.2.6      Sat Jan 24 06:08 - crash (132+19:16)
+ubuntu   :0           :0               Sat Jan 24 06:07 - crash (132+19:17)
+ubuntu   seat0        login screen     Sat Jan 24 06:07 - crash (132+19:17)
+reboot   system boot  6.14.0-1018-aws  Sat Jan 24 06:06   still running
+ubuntu   pts/0        154.192.1.10     Sat Jan 10 13:26 - crash (13+16:40)
+ubuntu   :0           :0               Sat Jan 10 13:24 - crash (13+16:42)
+ubuntu   seat0        login screen     Sat Jan 10 13:24 - crash (13+16:42)
+reboot   system boot  6.14.0-1018-aws  Sat Jan 10 13:23   still running
+ubuntu   pts/0        154.192.1.78     Sat Jan 10 10:03 - crash  (03:19)
+ubuntu   :0           :0            </pre></td>
+                </tr>
+                
+                <tr>
+                    <td>2026-06-06T01:29:34.533262</td>
+                    <td>access_logs</td>
+                    <td>Currently logged-in users</td>
+                    <td>success</td>
+                    <td><pre>ubuntu   seat0        2026-06-06 01:25 (login screen)
+ubuntu   :0           2026-06-06 01:25 (:0)
+ubuntu   pts/0        2026-06-06 01:26 (202.47.51.242)</pre></td>
+                </tr>
+                
+                <tr>
+                    <td>2026-06-06T01:29:34.533262</td>
+                    <td>access_logs</td>
+                    <td>Recent failed login attempts</td>
+                    <td>success</td>
+                    <td><pre></pre></td>
+                </tr>
+                
+                <tr>
+                    <td>2026-06-06T01:29:34.533262</td>
+                    <td>access_logs</td>
+                    <td>Local user account snapshot</td>
+                    <td>success</td>
+                    <td><pre>root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+systemd-timesync:x:996:996:systemd Time Synchronization:/:/usr/sbin/nologin
+dhcpcd:x:100</pre></td>
+                </tr>
+                
+                <tr>
+                    <td>2026-06-06T01:29:34.557797</td>
+                    <td>configuration_snapshots</td>
+                    <td>Host identity and operating system details</td>
+                    <td>success</td>
+                    <td><pre>Static hostname: ip-172-31-10-203
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: ec2eee9431b50768aed82ae045f4c73b
+         Boot ID: 4ded95b253cc4f4883f1bd3e74f8b9a8
+  Virtualization: amazon
+Operating System: Ubuntu 24.04.3 LTS
+          Kernel: Linux 6.14.0-1018-aws
+    Architecture: x86-64
+ Hardware Vendor: Amazon EC2
+  Hardware Model: t3a.large
+Firmware Version: 1.0
+   Firmware Date: Mon 2017-10-16
+    Firmware Age: 8y 7month 2w 5d</pre></td>
+                </tr>
+                
+                <tr>
+                    <td>2026-06-06T01:29:34.557797</td>
+                    <td>configuration_snapshots</td>
+                    <td>Network interface configuration</td>
+                    <td>success</td>
+                    <td><pre>1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: ens5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc mq state UP group default qlen 1000
+    link/ether 0a:ff:f9:a6:70:01 brd ff:ff:ff:ff:ff:ff
+    altname enp0s5
+    inet 172.31.10.203/24 brd 172.31.10.255 scope global dynamic noprefixroute ens5
+       valid_lft 3334sec preferred_lft 3334sec
+    inet6 fe80::8ff:f9ff:fea6:7001/64 scope link 
+       valid_lft forever preferred_lft forever</pre></td>
+                </tr>
+                
+                <tr>
+                    <td>2026-06-06T01:29:34.557797</td>
+                    <td>configuration_snapshots</td>
+                    <td>Firewall rules snapshot</td>
+                    <td>success</td>
+                    <td><pre>Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination</pre></td>
+                </tr>
+                
+                <tr>
+                    <td>2026-06-06T01:29:34.557797</td>
+                    <td>configuration_snapshots</td>
+                    <td>Installed package inventory sample</td>
+                    <td>success</td>
+                    <td><pre>Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                          Version                                  Architecture Description
++++-=============================================-========================================-============-================================================================================
+ii  accountsservice                               23.13.9-2ubuntu6                         amd64        query and manipulate user account information
+ii  acl                                           2.3.2-1build1.1                          amd64        access control list - utilities
+ii  acpid                                         1:2.0.34-1ubuntu2                        amd64        Advanced Configuration and Power Interface event daemon
+ii  adduser                                       3.137ubuntu1           </pre></td>
+                </tr>
+                
+                <tr>
+                    <td>2026-06-06T01:29:34.557797</td>
+                    <td>configuration_snapshots</td>
+                    <td>Kernel and platform information</td>
+                    <td>success</td>
+                    <td><pre>Linux ip-172-31-10-203 6.14.0-1018-aws #18~24.04.1-Ubuntu SMP Mon Nov 24 19:46:27 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux</pre></td>
+                </tr>
+                
+                <tr>
+                    <td>2026-06-06T01:29:34.848552</td>
+                    <td>security_events</td>
+                    <td>Recent warning-level system events</td>
+                    <td>success</td>
+                    <td><pre>Jun 06 01:29:17 ip-172-31-10-203 /usr/libexec/gdm-x-session[5888]: > Warning:          Could not resolve keysym XF86SidevuSonar
+Jun 06 01:29:17 ip-172-31-10-203 /usr/libexec/gdm-x-session[5888]: > Warning:          Could not resolve keysym XF86NavInfo
+Jun 06 01:29:17 ip-172-31-10-203 /usr/libexec/gdm-x-session[5888]: Errors from xkbcomp are not fatal to the X server
+Jun 06 01:29:17 ip-172-31-10-203 /usr/libexec/gdm-x-session[5901]: The XKEYBOARD keymap compiler (xkbcomp) reports:
+Jun 06 01:29:17 ip-172-31-10-203 /usr/libexec/gdm-x-session[5901]: > Warning:          Could not resolve keysym XF86CameraAccessEnable
+Jun 06 01:29:17 ip-172-31-10-203 /usr/libexec/gdm-x-session[5901]: > Warning:          Could not resolve keysym XF86CameraAccessDisable
+Jun 06 01:29:17 ip-172-31-10-203 /usr/libexec/gdm-x-session[5901]: > Warning:          Could not resolve keysym XF86CameraAccessToggle
+Jun 06 01:29:17 ip-172-31-10-203 /usr/libexec/gdm-x-session[5901]: > Warning:          Could not resolve keys</pre></td>
+                </tr>
+                
+                <tr>
+                    <td>2026-06-06T01:29:34.848552</td>
+                    <td>security_events</td>
+                    <td>Security-relevant configuration files</td>
+                    <td>success</td>
+                    <td><pre>/etc/deluser.conf
+/etc/host.conf
+/etc/xattr.conf
+/etc/adduser.conf
+/etc/sudo_logsrvd.conf
+/etc/nftables.conf
+/etc/apg.conf
+/etc/request-key.conf
+/etc/gai.conf
+/etc/sysctl.conf
+/etc/locale.conf
+/etc/libao.conf
+/etc/rsyslog.conf
+/etc/nsswitch.conf
+/etc/logrotate.conf
+/etc/ca-certificates.conf
+/etc/multipath.conf
+/etc/pnm2ppa.conf
+/etc/brltty.conf
+/etc/debconf.conf</pre></td>
+                </tr>
+                
+                <tr>
+                    <td>2026-06-06T01:29:34.848552</td>
+                    <td>security_events</td>
+                    <td>Enabled service inventory</td>
+                    <td>success</td>
+                    <td><pre>UNIT FILE                                      STATE   PRESET
+snap-amazon\x2dssm\x2dagent-11797.mount        enabled enabled
+snap-bare-5.mount                              enabled enabled
+snap-core22-2133.mount                         enabled enabled
+snap-core22-2163.mount                         enabled enabled
+snap-firefox-7423.mount                        enabled enabled
+snap-gnome\x2d42\x2d2204-226.mount             enabled enabled
+snap-gtk\x2dcommon\x2dthemes-1535.mount        enabled enabled
+snap-snapd-25202.mount                         enabled enabled
+snap-snapd-25577.mount                         enabled enabled
+snap-thunderbird-877.mount                     enabled enabled
+acpid.path                                     enabled enabled
+apport-autoreport.path                         enabled enabled
+tpm-udev.path                                  enabled enabled
+whoopsie.path                                  enabled enabled
+accounts-daemon.service                        enabled e</pre></td>
+                </tr>
+                
+            </table>
+        </body>
+        </html>
+        

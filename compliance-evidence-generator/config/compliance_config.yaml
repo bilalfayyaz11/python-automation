@@ -1,0 +1,15 @@
+organization:
+  name: "Federal Agency Demo"
+  department: "IT Operations"
+  compliance_framework: "NIST 800-53"
+
+evidence_types:
+  - system_logs
+  - access_logs
+  - configuration_snapshots
+  - security_events
+
+report_formats:
+  - json
+  - html
+  - csv
