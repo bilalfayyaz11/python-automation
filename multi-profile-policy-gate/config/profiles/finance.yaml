@@ -1,0 +1,16 @@
+profile:
+  name: finance
+  industry: PCI-DSS-compliant
+  rules:
+    - id: data_encryption
+      enabled: true
+      severity: critical
+      requirement: "Encrypt cardholder data"
+    - id: network_segmentation
+      enabled: true
+      severity: critical
+      requirement: "Isolate payment networks"
+    - id: access_control
+      enabled: true
+      severity: high
+      min_password_length: 12

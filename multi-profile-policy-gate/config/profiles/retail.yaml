@@ -1,0 +1,12 @@
+profile:
+  name: retail
+  industry: general-commerce
+  rules:
+    - id: data_encryption
+      enabled: true
+      severity: medium
+      requirement: "Encrypt customer PII"
+    - id: rate_limiting
+      enabled: true
+      severity: low
+      max_requests: 1000

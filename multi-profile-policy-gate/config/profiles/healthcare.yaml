@@ -1,0 +1,16 @@
+profile:
+  name: healthcare
+  industry: HIPAA-compliant
+  rules:
+    - id: data_encryption
+      enabled: true
+      severity: critical
+      requirement: "All PHI must be encrypted"
+    - id: access_logging
+      enabled: true
+      severity: high
+      requirement: "Log all data access"
+    - id: data_retention
+      enabled: true
+      severity: medium
+      max_days: 2555
