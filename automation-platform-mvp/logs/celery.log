@@ -1,0 +1,37 @@
+ 
+ -------------- celery@ip-172-31-10-79 v5.6.3 (recovery)
+--- ***** ----- 
+-- ******* ---- Linux-6.14.0-1018-aws-x86_64-with-glibc2.39 2026-06-06 01:54:19
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         automation_platform:0x786c59e29d00
+- ** ---------- .> transport:   redis://localhost:6379/0
+- ** ---------- .> results:     redis://localhost:6379/0
+- *** --- * --- .> concurrency: 2 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . workers.task_worker.execute_automation_task
+
+[2026-06-06 01:54:19,777: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2026-06-06 01:54:19,781: INFO/MainProcess] mingle: searching for neighbors
+[2026-06-06 01:54:20,794: INFO/MainProcess] mingle: all alone
+[2026-06-06 01:54:20,813: INFO/MainProcess] celery@ip-172-31-10-79 ready.
+[2026-06-06 01:54:22,147: INFO/MainProcess] Task workers.task_worker.execute_automation_task[bf9772ec-83d1-4fd7-bd36-3f994110dca0] received
+[2026-06-06 01:54:22,185: INFO/MainProcess] Task workers.task_worker.execute_automation_task[86557aa3-8383-459b-90da-a4afd501edbb] received
+[2026-06-06 01:54:22,450: INFO/MainProcess] Task workers.task_worker.execute_automation_task[c25d76ac-50ac-4a61-9e9a-879d53b6b01d] received
+[2026-06-06 01:54:22,737: INFO/MainProcess] Task workers.task_worker.execute_automation_task[823f5cca-95fd-4e93-b90a-52e6a6b37e55] received
+[2026-06-06 01:54:23,023: INFO/MainProcess] Task workers.task_worker.execute_automation_task[2e0b7f83-e11a-40f7-85f8-ff688e5dfc62] received
+[2026-06-06 01:54:24,165: INFO/ForkPoolWorker-1] Task workers.task_worker.execute_automation_task[bf9772ec-83d1-4fd7-bd36-3f994110dca0] succeeded in 2.0150878399999783s: {'task_id': '20260606-f200365d', 'status': 'completed', 'completed_at': '2026-06-06T01:54:24.163602Z', 'result': {'operation': 'backup', 'source': '/data', 'destination': '/backup', 'message': 'Backup simulation completed'}}
+[2026-06-06 01:54:24,201: INFO/ForkPoolWorker-2] Task workers.task_worker.execute_automation_task[86557aa3-8383-459b-90da-a4afd501edbb] succeeded in 2.01441335100003s: {'task_id': '20260606-ead3b833', 'status': 'completed', 'completed_at': '2026-06-06T01:54:24.200094Z', 'result': {'operation': 'deploy', 'service': 'web-app', 'version': '1.2.3', 'message': 'Deployment simulation completed'}}
+[2026-06-06 01:54:26,170: INFO/ForkPoolWorker-1] Task workers.task_worker.execute_automation_task[c25d76ac-50ac-4a61-9e9a-879d53b6b01d] succeeded in 2.0039142599999877s: {'task_id': '20260606-77ed410e', 'status': 'completed', 'completed_at': '2026-06-06T01:54:26.169145Z', 'result': {'operation': 'cleanup', 'target': 'temp-1', 'message': 'Cleanup simulation completed'}}
+[2026-06-06 01:54:26,207: INFO/ForkPoolWorker-2] Task workers.task_worker.execute_automation_task[823f5cca-95fd-4e93-b90a-52e6a6b37e55] succeeded in 2.0044566369999757s: {'task_id': '20260606-95c2d43a', 'status': 'completed', 'completed_at': '2026-06-06T01:54:26.205817Z', 'result': {'operation': 'cleanup', 'target': 'temp-2', 'message': 'Cleanup simulation completed'}}
+[2026-06-06 01:54:28,176: INFO/ForkPoolWorker-1] Task workers.task_worker.execute_automation_task[2e0b7f83-e11a-40f7-85f8-ff688e5dfc62] succeeded in 2.0049695250000923s: {'task_id': '20260606-fade0712', 'status': 'completed', 'completed_at': '2026-06-06T01:54:28.174336Z', 'result': {'operation': 'cleanup', 'target': 'temp-3', 'message': 'Cleanup simulation completed'}}
+
+worker: Warm shutdown (MainProcess)
+
+worker: Warm shutdown (MainProcess)

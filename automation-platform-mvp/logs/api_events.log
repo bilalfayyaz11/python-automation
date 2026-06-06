@@ -1,0 +1,12 @@
+2026-06-06T01:53:32.282832Z REJECTED reason=Invalid task_type 'invalid'. Allowed values: ['backup', 'cleanup', 'deploy']
+2026-06-06T01:53:32.337797Z QUEUED task_id=20260606-3665177d type=backup
+2026-06-06T01:53:32.375388Z QUEUED task_id=20260606-ffdd7394 type=deploy
+2026-06-06T01:53:32.619500Z QUEUED task_id=20260606-094e5454 type=cleanup
+2026-06-06T01:53:32.885900Z QUEUED task_id=20260606-453d5692 type=cleanup
+2026-06-06T01:53:33.153219Z QUEUED task_id=20260606-467c930f type=cleanup
+2026-06-06T01:54:22.085257Z REJECTED reason=Invalid task_type 'invalid'. Allowed values: ['backup', 'cleanup', 'deploy']
+2026-06-06T01:54:22.147486Z QUEUED task_id=20260606-f200365d type=backup
+2026-06-06T01:54:22.185708Z QUEUED task_id=20260606-ead3b833 type=deploy
+2026-06-06T01:54:22.450141Z QUEUED task_id=20260606-77ed410e type=cleanup
+2026-06-06T01:54:22.736958Z QUEUED task_id=20260606-95c2d43a type=cleanup
+2026-06-06T01:54:23.023437Z QUEUED task_id=20260606-fade0712 type=cleanup

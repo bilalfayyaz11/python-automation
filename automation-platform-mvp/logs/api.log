@@ -1,0 +1,28 @@
+ * Serving Flask app 'automation_api'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.10.79:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [06/Jun/2026 01:54:22] "GET /health HTTP/1.1" 200 -
+/home/ubuntu/automation-platform-mvp/api/automation_api.py:43: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  file.write(f"{datetime.utcnow().isoformat()}Z {message}\n")
+127.0.0.1 - - [06/Jun/2026 01:54:22] "[31m[1mPOST /api/tasks HTTP/1.1[0m" 400 -
+/home/ubuntu/automation-platform-mvp/api/automation_api.py:76: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  task_id = f"{datetime.utcnow().strftime('%Y%m%d')}-{uuid.uuid4().hex[:8]}"
+/home/ubuntu/automation-platform-mvp/api/automation_api.py:89: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "created_at": datetime.utcnow().isoformat() + "Z",
+/home/ubuntu/automation-platform-mvp/api/automation_api.py:90: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "updated_at": datetime.utcnow().isoformat() + "Z"
+/home/ubuntu/automation-platform-mvp/api/automation_api.py:93: DeprecationWarning: Call to deprecated setex. (Use 'set' instead.) -- Deprecated since version 2.6.12.
+  redis_client.setex(f"task:{task_id}", 3600, json.dumps(metadata))
+127.0.0.1 - - [06/Jun/2026 01:54:22] "[35m[1mPOST /api/tasks HTTP/1.1[0m" 202 -
+127.0.0.1 - - [06/Jun/2026 01:54:22] "[35m[1mPOST /api/tasks HTTP/1.1[0m" 202 -
+127.0.0.1 - - [06/Jun/2026 01:54:22] "[35m[1mPOST /api/tasks HTTP/1.1[0m" 202 -
+127.0.0.1 - - [06/Jun/2026 01:54:22] "[35m[1mPOST /api/tasks HTTP/1.1[0m" 202 -
+127.0.0.1 - - [06/Jun/2026 01:54:23] "[35m[1mPOST /api/tasks HTTP/1.1[0m" 202 -
+127.0.0.1 - - [06/Jun/2026 01:54:31] "GET /api/tasks/20260606-f200365d HTTP/1.1" 200 -
+127.0.0.1 - - [06/Jun/2026 01:54:31] "GET /api/tasks/20260606-ead3b833 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Jun/2026 01:54:31] "GET /api/tasks HTTP/1.1" 200 -
+127.0.0.1 - - [06/Jun/2026 01:54:31] "GET /api/tasks?status=completed HTTP/1.1" 200 -

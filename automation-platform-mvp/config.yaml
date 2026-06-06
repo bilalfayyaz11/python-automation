@@ -1,0 +1,19 @@
+redis:
+  host: localhost
+  port: 6379
+  db: 0
+
+api:
+  host: 0.0.0.0
+  port: 5000
+
+workers:
+  concurrency: 2
+
+policies:
+  max_retries: 3
+  timeout: 300
+  allowed_task_types:
+    - backup
+    - deploy
+    - cleanup
